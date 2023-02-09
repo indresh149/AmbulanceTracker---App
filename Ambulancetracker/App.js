@@ -13,6 +13,8 @@ import {
   Text,
 } from 'react-native';
 
+
+
 import Navigation from './src/navigation';
 import Amplify from 'aws-amplify'
 //import {withAuthenticator} from 'aws-amplify-react-native';
