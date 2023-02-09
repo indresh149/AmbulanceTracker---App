@@ -1,6 +1,6 @@
 import { View, Text, Dimensions } from 'react-native'
 import React from 'react'
-import HomeMap from '../../compenents/HomeMap';
+import RouteMap from '../../compenents/RouteMap';
 import AmbuTypes from '../../compenents/AmbuTypes';
 
 
@@ -8,10 +8,10 @@ const SearchResults = () => {
   return (
     <View style={{display:'flex',justifyContent:'space-between'}}>
     <View style={{height:Dimensions.get('window').height - 400}}>
-      <HomeMap/> 
+      <RouteMap/> 
     </View>
 
-    <View style={{height:400,backgroundColor:'red'}}>
+    <View style={{height:400}}>
 
         <AmbuTypes/>
         </View>
