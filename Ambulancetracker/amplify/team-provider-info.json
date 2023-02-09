@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-ambulancetracker-staging-185531-authRole",
+      "UnauthRoleArn": "arn:aws:iam::912886662595:role/amplify-ambulancetracker-staging-185531-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::912886662595:role/amplify-ambulancetracker-staging-185531-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-ambulancetracker-staging-185531-deployment",
+      "UnauthRoleName": "amplify-ambulancetracker-staging-185531-unauthRole",
+      "StackName": "amplify-ambulancetracker-staging-185531",
+      "StackId": "arn:aws:cloudformation:ap-south-1:912886662595:stack/amplify-ambulancetracker-staging-185531/a9f2b650-a586-11ed-98e6-0aa371e27a74",
+      "AmplifyAppId": "djjv9pikw1w4t"
+    },
+    "categories": {
+      "auth": {
+        "Ambulancetracker": {}
+      }
+    }
+  }
+}
