@@ -5,12 +5,7 @@ import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 
 const HomeMap = () => {
   return (
-    <View style={{
-        height:300,
-        backgroundColor:"#a0abff",
-        justifyContent:"center",
-        alignItems:"center",
-    }}>
+   
     <MapView
     style={{height:'100%',width:'100%'}}
     provider={PROVIDER_GOOGLE} // remove if not using Google Maps
@@ -23,7 +18,7 @@ const HomeMap = () => {
     }}
   >
   </MapView>
-    </View>
+    
   )
 }
 
