@@ -4,7 +4,6 @@ import HomeMap from '../../compenents/HomeMap';
 import AmbuTypes from '../../compenents/AmbuTypes';
 
 
-
 const SearchResults = () => {
   return (
     <View style={{display:'flex',justifyContent:'space-between'}}>
