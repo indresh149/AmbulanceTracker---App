@@ -13,7 +13,7 @@ const AmbuTypes = () => {
   return (
     <View>
       {typesData.map(type  => 
-        <AmbuTypeRow type={type}/>
+        <AmbuTypeRow type={type} key={type.id}/>
         )}
         <Pressable onPress={confirm} style={{
           backgroundColor:'black',

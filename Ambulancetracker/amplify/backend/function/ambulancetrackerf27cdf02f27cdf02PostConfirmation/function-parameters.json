@@ -1,0 +1,17 @@
+{
+  "trigger": true,
+  "modules": [
+    "custom"
+  ],
+  "parentResource": "ambulancetrackerf27cdf02f27cdf02",
+  "functionName": "ambulancetrackerf27cdf02f27cdf02PostConfirmation",
+  "resourceName": "ambulancetrackerf27cdf02f27cdf02PostConfirmation",
+  "parentStack": "auth",
+  "triggerEnvs": [],
+  "triggerDir": "C:\\snapshot\\repo\\build\\node_modules\\@aws-amplify\\amplify-category-auth\\provider-utils\\awscloudformation\\triggers\\PostConfirmation",
+  "triggerTemplate": "PostConfirmation.json.ejs",
+  "triggerEventPath": "PostConfirmation.event.json",
+  "roleName": "ambulancetrackerf27cdf02f27cdf02PostConfirmation",
+  "skipEdit": true,
+  "enableCors": false
+}

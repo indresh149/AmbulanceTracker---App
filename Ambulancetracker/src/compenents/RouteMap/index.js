@@ -6,24 +6,23 @@ import MapViewDirections from 'react-native-maps-directions';
 
 const GOOGLE_MAPS_APIKEY = 'AIzaSyBd11eKITZTuEunJRtfNVtkKjyC2VXyIcg';
 
-const RouteMap = () => {
+const RouteMap = ({origin,destination}) => {
 
-    const origin = {
-        latitude: 28.450627, 
-        longitude: -16.263045,
-    };
-    const destination = {
-        latitude: 28.460127,
-         longitude: -16.269045,
-        };
-    
+  const originLoc = {
+    latitude: origin.details.geometry.location.lat,
+    longitude: origin.details.geometry.location.lng,
+  };
 
+  const destinationLoc = {
+    latitude: destination.details.geometry.location.lat,
+    longitude: destination.details.geometry.location.lng,
+  };
   return (
    
     <MapView
     style={{height:'100%',width:'100%'}}
     provider={PROVIDER_GOOGLE} // remove if not using Google Maps
-
+    showsUserLocation={true}
     initialregion={{
       latitude: 28.450627,
       longitude: -16.263045,
@@ -32,8 +31,8 @@ const RouteMap = () => {
     }}
   >
   <MapViewDirections
-    origin={origin}
-    destination={destination}
+    origin={originLoc}
+        destination={destinationLoc}
     apikey={GOOGLE_MAPS_APIKEY}
     strokeWidth={5}
     strokeColor="black"

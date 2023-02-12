@@ -1,8 +1,36 @@
 {
-  "auth": {
-    "Ambulancetracker": {
-      "customAuth": false,
+  "api": {
+    "ambulancetracker": {
       "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "auth": {
+    "ambulancetrackerf27cdf02f27cdf02": {
+      "customAuth": false,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "ambulancetrackerf27cdf02f27cdf02PostConfirmation",
+          "triggerProvider": "Cognito"
+        }
+      ],
       "frontendAuthConfig": {
         "mfaConfiguration": "OFF",
         "mfaTypes": [
@@ -10,23 +38,79 @@
         ],
         "passwordProtectionSettings": {
           "passwordPolicyCharacters": [],
-          "passwordPolicyMinLength": 7
+          "passwordPolicyMinLength": 8
         },
         "signupAttributes": [
-          "EMAIL",
-          "NAME",
-          "PHONE_NUMBER"
+          "EMAIL"
         ],
         "socialProviders": [],
         "usernameAttributes": [
+          "EMAIL",
           "PHONE_NUMBER"
         ],
         "verificationMechanisms": [
-          "PHONE_NUMBER"
+          "EMAIL"
         ]
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "function": {
+    "ambulancetrackerf27cdf02f27cdf02PostConfirmation": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_auth_ambulancetrackerf27cdf02f27cdf02_amazonAppId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "ambulancetrackerf27cdf02f27cdf02"
+        }
+      ]
+    },
+    "AMPLIFY_auth_ambulancetrackerf27cdf02f27cdf02_appleAppId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "ambulancetrackerf27cdf02f27cdf02"
+        }
+      ]
+    },
+    "AMPLIFY_auth_ambulancetrackerf27cdf02f27cdf02_facebookAppId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "ambulancetrackerf27cdf02f27cdf02"
+        }
+      ]
+    },
+    "AMPLIFY_auth_ambulancetrackerf27cdf02f27cdf02_googleClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "ambulancetrackerf27cdf02f27cdf02"
+        }
+      ]
+    },
+    "AMPLIFY_function_ambulancetrackerf27cdf02f27cdf02PostConfirmation_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ambulancetrackerf27cdf02f27cdf02PostConfirmation"
+        }
+      ]
+    },
+    "AMPLIFY_function_ambulancetrackerf27cdf02f27cdf02PostConfirmation_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ambulancetrackerf27cdf02f27cdf02PostConfirmation"
+        }
+      ]
     }
   }
 }

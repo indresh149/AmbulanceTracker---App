@@ -22,7 +22,7 @@ const SplashScreen = () => {
         loop = {false}
         autoPlay = {true}
         //speed = {0.5}
-        onAnimationFinish = {()=> {navigation.navigate('SearchResults')}}
+        onAnimationFinish = {()=> {navigation.navigate('Home')}}
     />
     </View>
   )
